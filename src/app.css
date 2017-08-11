@@ -11,7 +11,7 @@
         height: 300px;
         position: absolute;
         top: 0;
-        bottom: 0;
+        bottom: 250px;
         left: 0;
         right: 0;
         margin: auto;
@@ -24,7 +24,7 @@
         line-height: 1.6;
       }
       .ui.inverted.vertical.segment .ui.footer.segment {
-        height: 80px;
+        height: 100px;
         width: 100%;
         position: absolute;
         bottom: 0;

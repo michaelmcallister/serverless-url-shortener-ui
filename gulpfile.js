@@ -2,13 +2,12 @@ var gulp = require('gulp');
 var install = require("gulp-install");
 
 //include plugins
-var plugins = require("gulp-load-plugins")({
+var $ = require("gulp-load-plugins")({
     pattern: ['gulp-*', 'gulp.*', 'main-bower-files'],
       replaceString: /\bgulp[\-.]/
 });
 
 var dest = 'build/';
-
 
 gulp.task('install', function() {
   return gulp.src(['./bower.json', './package.json'])
@@ -27,8 +26,8 @@ gulp.task('css',['install'], function() {
   ];
 
   return gulp.src(cssFiles)
-    .pipe(plugins.cleanCss())
-    .pipe(plugins.concat('app.min.css'))
+    .pipe($.cleanCss())
+    .pipe($.concat('app.min.css'))
 		.pipe(gulp.dest(dest + 'css'));
 });
 
@@ -48,13 +47,14 @@ gulp.task('js',['install'], function() {
   ];
 
 	return gulp.src(jsFiles)
-    .pipe(plugins.uglify())
-		.pipe(plugins.concat('app.min.js'))
+    .pipe($.uglify())
+		.pipe($.concat('app.min.js'))
 		.pipe(gulp.dest(dest + 'js'));
 });
 
-gulp.task('html',['install'], function() {
+gulp.task('html', function() {
 	return gulp.src('src/index.html')
+  .pipe($.htmlmin())
   .pipe(gulp.dest(dest));
 });
 

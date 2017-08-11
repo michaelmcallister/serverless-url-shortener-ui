@@ -24,6 +24,7 @@ deploy:
     skip_cleanup: true
     local_dir: "build"
     acl: public_read
+    cache_control: 3600
     on:
       repo: michaelmcallister/serverless-url-shortener-ui
       tags: true
