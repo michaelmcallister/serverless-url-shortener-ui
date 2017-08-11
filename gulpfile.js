@@ -52,7 +52,7 @@ gulp.task('js',['install'], function() {
 		.pipe(gulp.dest(dest + 'js'));
 });
 
-gulp.task('html', function() {
+gulp.task('html',['install'], function() {
 	return gulp.src('src/index.html')
   .pipe($.htmlmin())
   .pipe(gulp.dest(dest));
