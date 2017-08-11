@@ -13,7 +13,7 @@ install:
   - npm install -D gulp gulp-install gulp-load-plugins
 
 script:
-  - npm test
+  - gulp
 
 deploy:
   - provider: s3
