@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+ <title>Shrink your URL!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="theme-color" content="#1b1c1d" />
+  <meta name="description" content="need to turn your long URLs into small ones? Better Shrinky Linky!"/>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="css/app.min.css">
+</head>
+  <body>
+  <div class="ui basic modal">
+    <div class="ui icon header">
+      <i class="green check circle icon"></i>
+      Success!
+    </div>
+    <div class="ui stackable centered page grid content">
+      <div class="ui action input">
+        <input id="shortURL" type="text" value="">
+        <button class="ui teal right labeled icon button copy-button" data-clipboard-target="#shortURL" data-content="Copied to Clipboard!" data-variation="inverted">
+          <i class="copy icon"></i>
+          Copy
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="ui inverted vertical center aligned segment">
+    <div class="ui text container">
+      <p>
+      <h1 class="ui inverted header">
+        <div class="content">
+          Shrinky Linky <i class="linkify icon"></i>
+        </div>
+      </h1>
+        <a href="https://sknk.ws">sknk.ws</a> shrinks long complex URLs into smaller ones.
+      </p>
+      <div class="ui inverted segment">
+        <form class="ui big form">
+        <div class="field">
+            <div class="ui fluid action input">
+                <input type="text" name="url" placeholder="https://sknk.ws"/>
+                <div class="ui teal submit button">Submit</div>
+            </div>
+        </div>
+        <div class="ui error message"></div>
+        </form>
+      </div>
+    </div>
+    <div class="ui inverted vertical footer segment">
+      Made with <i class="red inverted heart icon"></i> by <a href="https://blog.skunkw0rks.io">Michael McAllister</a>.
+    </div>
+  </div>
+  </body>
+  <script type="text/javascript" src="js/app.min.js"></script>
+</html>
